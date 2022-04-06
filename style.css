@@ -4,20 +4,20 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    
+    height: 95vh;
+    background-color: black;  
     }
 @font-face {
     font-family: Norse-Bold;
-    src: url(/assets/Norse-Bold.otf);
-    font-family: Norse;
-    src: url(/assets/Norse.otf);
+    src: url(./assets/Norse-Bold.otf);
+}
+    @font-face{
+        font-family: Norse;
+        src: url(./assets/Norse.otf);
+    }
+@font-face{
     font-family: CenturyExpanded;
-    src: url(/assets/CenturyExpanded.otf);
+    src: url(./assets/CenturyExpanded.otf);
   }
   
   h1 {
@@ -30,7 +30,10 @@ body{
   }
   p{
       font-family: CenturyExpanded, Arial, Helvetica, sans-serif;
+      font-size: 24px;
       color: white;
+      margin: 3rem 0 0.5rem 0;
+
   }
 .main{
     display:flex;
@@ -38,8 +41,11 @@ body{
     align-items:center;
 }
 .right{
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    width: 50%;
+    max-width: 50%;
+
 }
 .logo-container{
     display: flex;
@@ -47,24 +53,40 @@ body{
     align-items: center;
     position: absolute;
     top: 20px;
-    left: 20px;
-    
+    left: 20px; 
 }
 .logo{
     max-width: 70px;
 }
 .credit{
     position: absolute;
-  top: 100%;
+  top: 90%;
   left: 25%;
   transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+ }
  
-
-}
 .background{
-    
-    
+    height: 95vh;
+    width: auto;    
 }
 .left{
 
+}
+form{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+}
+button, label, input, select, progress, meter {
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    width: 30%;
+    padding: 5px;
+    height: 30px;
 }
