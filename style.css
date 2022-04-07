@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --text-color: white;
+    --pop-color: #B5883A;
+    --hover: #b5883a, 45deg;
+
+}
 body{
     height: 95vh;
     background-color: black;  
@@ -22,19 +28,20 @@ body{
   
   h1 {
     font-family: Norse-Bold, 'Times New Roman', Times, serif;
-    color: white;
+    color: var(--text-color);
   }
-  .label{
-      font-family: Norse, Arial, Helvetica, sans-serif;
-      color: white;
-  }
+  
   p{
       font-family: CenturyExpanded, Arial, Helvetica, sans-serif;
       font-size: 24px;
-      color: white;
+      color: var(--text-color);
       margin: 3rem 0 0.5rem 0;
+}
 
-  }
+.label{
+    font-family: Norse, Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+}
 .main{
     display:flex;
     justify-content: space-between;
@@ -59,34 +66,76 @@ body{
     max-width: 70px;
 }
 .credit{
-    position: absolute;
+position: absolute;
   top: 90%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-  font-size: 0.8rem;
+  left: 25%; 
+ }
+ .smallText
+ {
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
  }
  
 .background{
     height: 95vh;
     width: auto;    
 }
-.left{
 
-}
-form{
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-bottom: 3rem;
-}
-button, label, input, select, progress, meter {
-    display: inline-flex;
+label, input, select, progress, meter {
+    display: block;
     font-family: inherit;
     font-size: 100%;
     margin: 0;
     box-sizing: border-box;
-    width: 30%;
-    padding: 5px;
+    width: 80%;
+    padding: 15px 0;
     height: 30px;
+    border-radius: 8px;
+    letter-spacing: 1px;
 }
+input {
+    border: none;        /* Remove default borders */
+    padding: 4px 8px;
+    
+  }
+  input:focus{
+    outline: none;      /* Remove default outline and use border or box-shadow */
+    box-shadow: 0 0 0 3px var(--pop-color); /* Full freedom. (works also with border-radius) */
+  }
+fieldset{
+    display: flex;
+    border: none;
+}
+fieldset > div{
+    width: 100%;
+}
+
+button{
+    width: 40%;
+    height: 45px;
+    background-color: var(--pop-color);
+    margin: 80px 0;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+button:focus, button:hover{
+    background-color: #cf9e49;   
+}
+
+a:link {
+    text-decoration: none;
+    color: var(--pop-color)
+  }
+  a:visited{
+    color: var(--pop-color)
+  }
+  a:hover {
+    text-decoration: underline;
+    font-size: 1.2rem;
+  }  
+  a:active {
+    text-decoration: underline;
+    font-size: 1.2rem;
+  }
