@@ -6,8 +6,6 @@
 :root{
     --text-color: white;
     --pop-color: #B5883A;
-    --hover: #b5883a, 45deg;
-
 }
 body{
     height: 95vh;
@@ -30,12 +28,11 @@ body{
     font-family: Norse-Bold, 'Times New Roman', Times, serif;
     color: var(--text-color);
   }
-  
   p{
       font-family: CenturyExpanded, Arial, Helvetica, sans-serif;
       font-size: 24px;
       color: var(--text-color);
-      margin: 3rem 0 0.5rem 0;
+      margin: 2.5rem 0 0.5rem 0;
 }
 
 .label{
@@ -52,8 +49,8 @@ body{
     flex-direction: column;
     height: 100%;
     max-width: 50%;
-
 }
+
 .logo-container{
     display: flex;
     flex-direction: column;
@@ -66,19 +63,20 @@ body{
     max-width: 70px;
 }
 .credit{
-position: absolute;
-  top: 90%;
-  left: 25%; 
+    position: relative;
+    top: 90%;
+    text-align: center;
  }
  .smallText
  {
-    transform: translate(-50%, -50%);
+     margin: 0;
+     padding: 0;
     font-size: 0.8rem;
  }
  
 .background{
     height: 95vh;
-    width: auto;    
+    width: auto;
 }
 
 label, input, select, progress, meter {
@@ -93,10 +91,12 @@ label, input, select, progress, meter {
     border-radius: 8px;
     letter-spacing: 1px;
 }
+label{
+    margin: 0 0 4px;
+}
 input {
     border: none;        /* Remove default borders */
-    padding: 4px 8px;
-    
+    padding: 4px 8px; 
   }
   input:focus{
     outline: none;      /* Remove default outline and use border or box-shadow */
@@ -111,17 +111,18 @@ fieldset > div{
 }
 
 button{
-    width: 40%;
+    width: 25%;
     height: 45px;
     background-color: var(--pop-color);
-    margin: 80px 0;
+    margin: 35px 0 8px 0;
     border-radius: 8px;
-    font-size: 1.5rem;
+    font-size: 1.25vw;
     letter-spacing: 1px;
     font-weight: bold;
 }
 button:focus, button:hover{
-    background-color: #cf9e49;   
+    background-color: #cf9e49;
+    transition: all 500ms ease;
 }
 
 a:link {
@@ -134,6 +135,7 @@ a:link {
   a:hover {
     text-decoration: underline;
     font-size: 1.2rem;
+    transition: all 500ms ease;
   }  
   a:active {
     text-decoration: underline;
